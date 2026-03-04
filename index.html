@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">Game Developer Portfolio</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay-texture"></div>
+    
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-text">FK</span>
+        </div>
+        <nav class="desktop-nav">
+            <ul class="nav-links">
+                <li><a href="#about" data-i18n="nav_about">About</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="language-switch">
+                <button id="lang-tr" class="lang-btn">TR</button>
+                <span class="lang-divider">|</span>
+                <button id="lang-en" class="lang-btn active">EN</button>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav-overlay" id="mobile-nav">
+        <ul class="mobile-nav-links">
+            <li><a href="#about" data-i18n="nav_about" class="mobile-nav-link">About</a></li>
+            <li><a href="#projects" data-i18n="nav_projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#skills" data-i18n="nav_skills" class="mobile-nav-link">Skills</a></li>
+            <li><a href="#contact" data-i18n="nav_contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="hero_title">Fikret Kutluay</h1>
+                <h2 class="hero-subtitle" data-i18n="hero_subtitle">Game Developer</h2>
+                <p class="hero-description" data-i18n="hero_desc">Forging worlds from darkness and code.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary" data-i18n="btn_view_work">View My Work</a>
+                </div>
+            </div>
+            <div class="embers-container" id="embers"></div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="about_title">About Me</h2>
+                    <div class="separator"></div>
+                </div>
+                <div class="about-content">
+                    <div class="about-image-wrapper">
+                        <!-- Thematic image placeholder -->
+                        <div class="avatar-placeholder"></div>
+                    </div>
+                    <div class="about-text">
+                        <p data-i18n="about_p1">Welcome, traveler. I am a game developer passionate about creating immersive, atmospheric experiences.</p>
+                        <p data-i18n="about_p2">With a strong background in game engines and programming, I specialize in crafting mechanics that challenge the player and worlds that tell a story without words.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="projects_title">Grimoire of Works</h2>
+                    <div class="separator"></div>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project Card 1 -->
+                    <div class="project-card">
+                        <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?q=80&w=1000&auto=format&fit=crop');"></div>
+                        <div class="project-info">
+                            <h3 class="project-name" data-i18n="proj1_name">Abyssal Descent</h3>
+                            <p class="project-desc" data-i18n="proj1_desc">A dark fantasy metroidvania where you explore the ruins of a fallen kingdom.</p>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm" target="_blank">itch.io</a>
+                                <a href="#" class="btn btn-sm" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card">
+                        <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1000&auto=format&fit=crop');"></div>
+                        <div class="project-info">
+                            <h3 class="project-name" data-i18n="proj2_name">Ember's Fade</h3>
+                            <p class="project-desc" data-i18n="proj2_desc">A challenging soulslike action RPG with precise combat mechanics.</p>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm" target="_blank">itch.io</a>
+                                <a href="#" class="btn btn-sm" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card">
+                        <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1000&auto=format&fit=crop');"></div>
+                        <div class="project-info">
+                            <h3 class="project-name" data-i18n="proj3_name">Hollow Knight Clone</h3>
+                            <p class="project-desc" data-i18n="proj3_desc">A technical showcase of 2D platforming mechanics and boss AI.</p>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="skills_title">Arsenal</h2>
+                    <div class="separator"></div>
+                </div>
+                
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3 class="category-title" data-i18n="skill_engine">Engines & Tools</h3>
+                        <ul class="skill-list">
+                            <li>Unity3D</li>
+                            <li>Unreal Engine 5</li>
+                            <li>Godot</li>
+                            <li>Blender</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="category-title" data-i18n="skill_lang">Languages</h3>
+                        <ul class="skill-list">
+                            <li>C#</li>
+                            <li>C++</li>
+                            <li>Python</li>
+                            <li>JavaScript/HTML/CSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="contact_title">Send a Messenger</h2>
+                    <div class="separator"></div>
+                </div>
+                
+                <div class="contact-content">
+                    <form id="contact-form" class="dark-form" onsubmit="event.preventDefault();">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact_name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact_email">Your Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact_message">Your Message</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" data-i18n="btn_send">Send Message</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">GitHub</a>
+                        <a href="#" class="social-icon">LinkedIn</a>
+                        <a href="#" class="social-icon">itch.io</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-separator"></div>
+            <p><span data-i18n="footer_text">© <span id="year"></span> Fikret Kutluay. All rights reserved in the Abyss.</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
