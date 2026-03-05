@@ -209,6 +209,47 @@ a:hover {
     right: -10px;
 }
 
+.sidebar-contact {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.sidebar-email {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    word-break: break-all;
+}
+
+.sidebar-email:hover {
+    color: var(--accent-red);
+    text-shadow: 0 0 8px var(--glow-red);
+}
+
+.sidebar-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.sidebar-icon {
+    color: var(--accent-gold);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--font-heading);
+    transition: all 0.3s ease;
+}
+
+.sidebar-icon:hover {
+    color: var(--accent-red);
+    text-shadow: 0 0 10px var(--glow-red);
+}
+
 .desktop-nav {
     flex-grow: 1;
     display: flex;
@@ -626,7 +667,8 @@ a:hover {
 }
 
 .project-card {
-    flex: 0 0 calc(33.333% - 14px);
+    flex: 0 0 calc(45% - 20px);
+    /* Show 2 prominent cards and peeking edges */
     scroll-snap-align: start;
     background: var(--bg-medium);
     border: 1px solid var(--border-color);
@@ -1027,6 +1069,10 @@ footer {
 
     .logo-text {
         font-size: 2rem;
+    }
+
+    .logo .sidebar-contact {
+        display: none;
     }
 
     .desktop-nav,
