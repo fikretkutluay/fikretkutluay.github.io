@@ -238,28 +238,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Language Initialization
     currentLang = localStorage.getItem('portfolio_lang') || 'tr';
-    setLanguage(currentLang);
 
-    // Language Switch Buttons (Class based for mobile & desktop)
-    const btnTrList = document.querySelectorAll('.lang-tr-btn');
-    const btnEnList = document.querySelectorAll('.lang-en-btn');
-
-    if (btnTrList.length > 0 && btnEnList.length > 0) {
-        btnTrList.forEach(btn => btn.addEventListener('click', () => setLanguage('tr')));
-        btnEnList.forEach(btn => btn.addEventListener('click', () => setLanguage('en')));
-    }
+    // Language Switch Buttons via Event Delegation (fixes mobile & layout z-index issues)
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.lang-tr-btn')) {
+            setLanguage('tr');
+        } else if (e.target.closest('.lang-en-btn')) {
+            setLanguage('en');
+        }
+    });
 
     function setLanguage(lang) {
         currentLang = lang;
         localStorage.setItem('portfolio_lang', lang);
 
         // Update active class on all buttons
-        btnTrList.forEach(btn => btn.classList.toggle('active', lang === 'tr'));
-        btnEnList.forEach(btn => btn.classList.toggle('active', lang === 'en'));
+        document.querySelectorAll('.lang-tr-btn').forEach(btn => btn.classList.toggle('active', lang === 'tr'));
+        document.querySelectorAll('.lang-en-btn').forEach(btn => btn.classList.toggle('active', lang === 'en'));
 
         // Translate all elements with data-i18n attribute
         updateTranslations(lang);
     }
+
+    // Call it initially after setup
+    setLanguage(currentLang);
 
     // Split translation logic so we can call it when filtering projects too
     function updateTranslations(lang) {
@@ -373,26 +375,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileNav = document.getElementById('mobile-nav');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    // Mobile Menu Toggle via Event Delegation
+    document.addEventListener('click', (e) => {
+        const menuBtn = e.target.closest('#mobile-menu-btn');
+        const navLink = e.target.closest('.mobile-nav-link');
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 
-    if (mobileMenuBtn && mobileNav) {
-        mobileMenuBtn.addEventListener('click', () => {
+        if (menuBtn && mobileNav && mobileMenuBtn) {
             mobileMenuBtn.classList.toggle('active');
             mobileNav.classList.toggle('active');
             document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-        });
-
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuBtn.classList.remove('active');
-                mobileNav.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-    }
+        } else if (navLink && mobileNav && mobileMenuBtn) {
+            mobileMenuBtn.classList.remove('active');
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
 
     // Since we no longer use a top navbar, we can remove the old scroll effect
     // Or attach it to something else if needed. For now, it's removed.
