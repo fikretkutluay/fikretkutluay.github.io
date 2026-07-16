@@ -1,29 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="title">Fikret Kutluay — Game Developer</title>
-    <meta name="description" content="Fikret Kutluay — Software Engineer & Game Developer. Unity, C#, AI automation.">
+    <meta name="description" content="Fikret Kutluay — Game Developer & Software Engineer. Unity, C#, AI automation.">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="grain"></div>
-
-    <!-- Top Navigation -->
     <header class="topbar">
-        <a href="#hero" class="brand">
-            <span class="brand-mark">FK</span>
-        </a>
+        <a href="index.html" class="brand">Fikret Kutluay</a>
 
         <nav class="nav-desktop">
             <ul class="nav-links">
                 <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
                 <li><a href="#about" data-i18n="nav_about">About</a></li>
-                <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
-                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
             </ul>
             <div class="lang-switch">
                 <button class="lang-btn lang-tr-btn">TR</button>
@@ -37,13 +30,10 @@
         </button>
     </header>
 
-    <!-- Mobile Nav -->
     <div class="mobile-nav" id="mobile-nav">
         <ul class="mobile-links">
             <li><a href="#portfolio" data-i18n="nav_portfolio" class="mobile-link">Portfolio</a></li>
             <li><a href="#about" data-i18n="nav_about" class="mobile-link">About</a></li>
-            <li><a href="#skills" data-i18n="nav_skills" class="mobile-link">Skills</a></li>
-            <li><a href="#contact" data-i18n="nav_contact" class="mobile-link">Contact</a></li>
         </ul>
         <div class="lang-switch">
             <button class="lang-btn lang-tr-btn">TR</button>
@@ -53,97 +43,58 @@
     </div>
 
     <main>
-        <!-- Hero -->
-        <section id="hero" class="hero">
-            <div class="embers" id="embers"></div>
-            <div class="hero-inner">
-                <h1 class="hero-name" data-i18n="hero_title">Fikret Kutluay</h1>
-                <div class="hero-rule"></div>
-                <p class="hero-role" data-i18n="hero_subtitle">Game Developer</p>
-                <p class="hero-desc" data-i18n="hero_desc">Building structured architectures and immersive gameplay.</p>
-                <a href="#portfolio" class="btn" data-i18n="btn_view_work">View Portfolio</a>
-            </div>
+        <!-- Hero band: oversized centred name, rule, role -->
+        <section id="hero" class="hero band">
+            <img src="character.svg" alt="" class="pixel-char" width="32" height="43">
+            <h1 class="hero-name" data-i18n="hero_title">Fikret Kutluay</h1>
+            <div class="rule"></div>
+            <p class="hero-role" data-i18n="hero_subtitle">Game Developer</p>
         </section>
 
-        <!-- Portfolio -->
-        <section id="portfolio" class="section">
-            <div class="wrap">
-                <h2 class="section-title" data-i18n="portfolio_title">Portfolio</h2>
-                <div id="portfolio-container">
-                    <!-- Categories injected by script.js -->
+        <!-- Portfolio: category cards -> subpages -->
+        <section id="portfolio" class="section section-centred">
+            <div class="col">
+                <div class="page-head">
+                    <h2 class="page-title" data-i18n="portfolio_title">Portfolio</h2>
+                    <div class="rule"></div>
+                    <p class="page-sub" data-i18n="portfolio_sub"></p>
+
+                    <ul class="profile-links">
+                        <li><a href="https://github.com/fikretkutluay" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="https://fikretkutluay.itch.io" target="_blank" rel="noopener">itch.io</a></li>
+                        <li><a href="https://www.linkedin.com/in/fikret-kutluay-/" target="_blank"
+                                rel="noopener">LinkedIn</a></li>
+                        <li class="mail-item">
+                            <a href="mailto:kutluayfikret17@gmail.com" id="mail-link">kutluayfikret17@gmail.com</a>
+                            <button type="button" class="copy-btn" id="copy-mail" data-mail="kutluayfikret17@gmail.com"
+                                data-i18n="btn_copy">Copy</button>
+                        </li>
+                    </ul>
                 </div>
+
+                <div class="cat-cards" id="category-cards"></div>
             </div>
         </section>
 
-        <!-- About -->
-        <section id="about" class="section">
-            <div class="wrap">
-                <h2 class="section-title" data-i18n="about_title">About</h2>
-                <div class="about-grid">
-                    <div class="about-portrait"></div>
-                    <div class="about-text">
-                        <p data-i18n="about_p1"></p>
-                        <p data-i18n="about_p2"></p>
-                        <p data-i18n="about_p3"></p>
-                    </div>
+        <!-- About band: two columns of prose, centred container -->
+        <section id="about" class="section band section-centred">
+            <div class="col">
+                <div class="page-head">
+                    <h2 class="page-title" data-i18n="about_title">About</h2>
+                    <div class="rule"></div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills" class="section">
-            <div class="wrap">
-                <h2 class="section-title" data-i18n="skills_title">Skills</h2>
-                <div class="skills-grid" id="skills-container">
-                    <!-- Skill groups injected by script.js -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="section">
-            <div class="wrap">
-                <h2 class="section-title" data-i18n="contact_title">Contact</h2>
-                <div class="contact-grid">
-                    <div class="contact-aside">
-                        <p class="contact-blurb" data-i18n="contact_blurb"></p>
-                        <a href="mailto:kutluayfikret17@gmail.com" class="contact-mail">kutluayfikret17@gmail.com</a>
-                        <ul class="contact-socials">
-                            <li><a href="https://github.com/fikretkutluay" target="_blank" rel="noopener">GitHub</a></li>
-                            <li><a href="https://www.linkedin.com/in/fikret-kutluay-/" target="_blank"
-                                    rel="noopener">LinkedIn</a></li>
-                            <li><a href="https://fikretkutluay.itch.io" target="_blank" rel="noopener">itch.io</a></li>
-                        </ul>
-                    </div>
-
-                    <form id="contact-form" class="form" action="https://formsubmit.co/kutluayfikret17@gmail.com"
-                        method="POST">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_subject" value="New message from Fikret Kutluay Portfolio!">
-                        <input type="hidden" name="_template" value="box">
-
-                        <div class="field">
-                            <label for="name" data-i18n="contact_name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="field">
-                            <label for="email" data-i18n="contact_email">Your Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="field">
-                            <label for="message" data-i18n="contact_message">Your Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-block" data-i18n="btn_send">Send Message</button>
-                    </form>
+                <div class="about-text">
+                    <p data-i18n="about_p1"></p>
+                    <p data-i18n="about_p2"></p>
+                    <p data-i18n="about_p3"></p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="wrap">
-            <p data-i18n="footer_text">© <span id="year"></span> Fikret Kutluay</p>
+        <div class="col">
+            <p data-i18n="footer_text">© Fikret Kutluay</p>
         </div>
     </footer>
 
