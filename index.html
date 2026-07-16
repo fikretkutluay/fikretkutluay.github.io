@@ -1,210 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="title">Game Developer Portfolio</title>
-    <!-- CSS -->
+    <title data-i18n="title">Fikret Kutluay — Game Developer</title>
+    <meta name="description" content="Fikret Kutluay — Game Developer & Software Engineer. Unity, C#, AI automation.">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="overlay-texture"></div>
-    <div class="hyperspace-dust"></div>
+    <header class="topbar">
+        <a href="index.html" class="brand">Fikret Kutluay</a>
 
-    <div class="cinematic-border border-top"></div>
-    <div class="cinematic-border border-bottom"></div>
-
-    <div class="layout-wrapper">
-        <!-- Side Navigation (Holocron Interface) -->
-        <aside class="side-nav">
-            <div class="logo">
-                <span class="logo-text">FK</span>
-                <div class="logo-decoration"></div>
-                <div class="sidebar-contact" style="margin-top: 20px;">
-                    <a href="mailto:kutluayfikret17@gmail.com" class="sidebar-email">kutluayfikret17@gmail.com</a>
-                    <div class="sidebar-socials">
-                        <a href="https://github.com/fikretkutluay" target="_blank" class="sidebar-icon">GitHub</a>
-                        <a href="https://www.linkedin.com/in/fikret-kutluay-/" target="_blank"
-                            class="sidebar-icon">LinkedIn</a>
-                        <a href="https://fikretkutluay.itch.io" target="_blank" class="sidebar-icon">itch.io</a>
-                    </div>
-                </div>
-            </div>
-
-            <nav class="desktop-nav">
-                <ul class="nav-links">
-                    <li><a href="#about" data-i18n="nav_about">About</a></li>
-                    <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
-                    <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
-                    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="nav-bottom">
-                <div class="language-switch">
-                    <button class="lang-btn lang-tr-btn">TR</button>
-                    <span class="lang-divider">|</span>
-                    <button class="lang-btn lang-en-btn active">EN</button>
-                </div>
-            </div>
-
-            <!-- Mobile Toggle -->
-            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </aside>
-
-        <!-- Mobile Nav Overlay -->
-        <div class="mobile-nav-overlay" id="mobile-nav">
-            <ul class="mobile-nav-links">
-                <li><a href="#about" data-i18n="nav_about" class="mobile-nav-link">About</a></li>
-                <li><a href="#projects" data-i18n="nav_projects" class="mobile-nav-link">Projects</a></li>
-                <li><a href="#skills" data-i18n="nav_skills" class="mobile-nav-link">Skills</a></li>
-                <li><a href="#contact" data-i18n="nav_contact" class="mobile-nav-link">Contact</a></li>
+        <nav class="nav-desktop">
+            <ul class="nav-links">
+                <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+                <li><a href="#about" data-i18n="nav_about">About</a></li>
             </ul>
-            <div class="mobile-language-switch">
+            <div class="lang-switch">
                 <button class="lang-btn lang-tr-btn">TR</button>
-                <span class="lang-divider">|</span>
-                <button class="lang-btn lang-en-btn active">EN</button>
+                <span class="lang-divider">/</span>
+                <button class="lang-btn lang-en-btn">EN</button>
             </div>
-            <div class="sidebar-contact mobile-socials" style="margin-top: 30px; text-align: center;">
-                <a href="mailto:kutluayfikret17@gmail.com" class="sidebar-email"
-                    style="font-size: 1.1rem; margin-bottom: 20px;">kutluayfikret17@gmail.com</a>
-                <div class="sidebar-socials" style="gap: 25px;">
-                    <a href="https://github.com/fikretkutluay" target="_blank" class="sidebar-icon"
-                        style="font-size: 1.1rem;">GitHub</a>
-                    <a href="https://www.linkedin.com/in/fikret-kutluay-/" target="_blank" class="sidebar-icon"
-                        style="font-size: 1.1rem;">LinkedIn</a>
-                    <a href="https://fikretkutluay.itch.io" target="_blank" class="sidebar-icon"
-                        style="font-size: 1.1rem;">itch.io</a>
-                </div>
-            </div>
+        </nav>
+
+        <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <ul class="mobile-links">
+            <li><a href="#portfolio" data-i18n="nav_portfolio" class="mobile-link">Portfolio</a></li>
+            <li><a href="#about" data-i18n="nav_about" class="mobile-link">About</a></li>
+        </ul>
+        <div class="lang-switch">
+            <button class="lang-btn lang-tr-btn">TR</button>
+            <span class="lang-divider">/</span>
+            <button class="lang-btn lang-en-btn">EN</button>
         </div>
-
-        <!-- Scrollable Content Area -->
-        <main class="content-area">
-            <!-- Hero Section -->
-            <section id="hero" class="hero-section">
-                <div class="hero-content">
-                    <h1 class="hero-title" data-i18n="hero_title">Fikret Kutluay</h1>
-                    <h2 class="hero-subtitle" data-i18n="hero_subtitle">Game Developer</h2>
-                    <p class="hero-description" data-i18n="hero_desc">Developing structured architectures and immersive
-                        gameplay experiences.</p>
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary" data-i18n="btn_view_work">View My Work</a>
-                    </div>
-                </div>
-                <!-- Particle container mixed with embers and dust -->
-                <div class="embers-container" id="embers"></div>
-            </section>
-
-            <!-- About Section -->
-            <section id="about" class="about-section section-padding">
-                <div class="container">
-                    <div class="section-header">
-                        <h2 class="section-title" data-i18n="about_title">About Me</h2>
-                        <div class="separator sith-separator"></div>
-                    </div>
-                    <div class="about-content">
-                        <div class="about-image-wrapper">
-                            <!-- Thematic image placeholder -->
-                            <div class="avatar-placeholder"></div>
-                        </div>
-                        <div class="about-text">
-                            <p data-i18n="about_p1">Welcome. I am a 3rd-year Software Engineering student at Ankara
-                                University, specializing in game development with Unity and C#.</p>
-                            <p data-i18n="about_p2">I utilize object-oriented principles and clean code methodologies to
-                                build robust core game frameworks, custom level editors, and rapid prototypes. My focus
-                                lies in constructing scalable architectures and optimizing performance for mobile and PC
-                                platforms.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects" class="projects-section section-padding">
-                <div class="container">
-                    <div class="section-header">
-                        <h2 class="section-title" data-i18n="projects_title">Portfolio Projects</h2>
-                        <div class="separator sith-separator"></div>
-                    </div>
-
-                    <div id="projects-container">
-                        <!-- Categories and projects will be dynamically injected here by script.js -->
-                    </div>
-                </div>
-            </section>
-
-            <!-- Skills Section -->
-            <section id="skills" class="skills-section section-padding">
-                <div class="container">
-                    <div class="section-header">
-                        <h2 class="section-title" data-i18n="skills_title">Skills & Tools</h2>
-                        <div class="separator sith-separator"></div>
-                    </div>
-
-                    <div class="skills-container">
-                        <div class="skill-category">
-                            <h3 class="category-title" data-i18n="skill_engine">Game Engines & Tools</h3>
-                        </div>
-                        <div class="skill-category">
-                            <h3 class="category-title" data-i18n="skill_lang">Programming & Concepts</h3>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="contact-section section-padding">
-                <div class="container">
-                    <div class="section-header">
-                        <h2 class="section-title" data-i18n="contact_title">Get In Touch</h2>
-                        <div class="separator sith-separator"></div>
-                    </div>
-
-                    <div class="contact-content">
-                        <form id="contact-form" class="dark-form"
-                            action="https://formsubmit.co/kutluayfikret17@gmail.com" method="POST">
-                            <!-- Anti-spam & UI config for FormSubmit -->
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_subject" value="New message from Fikret Kutluay Portfolio!">
-                            <input type="hidden" name="_template" value="box">
-
-                            <div class="form-group">
-                                <label for="name" data-i18n="contact_name">Your Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" data-i18n="contact_email">Your Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message" data-i18n="contact_message">Your Message</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block" data-i18n="btn_send">Send
-                                Message</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-        </main>
     </div>
 
-    <footer>
-        <div class="container">
-            <div class="footer-separator"></div>
-            <p><span data-i18n="footer_text">© <span id="year"></span> Fikret Kutluay. All rights reserved in the
-                    Abyss.</span></p>
+    <main>
+        <!-- Hero band: oversized centred name, rule, role -->
+        <section id="hero" class="hero band">
+            <img src="character.svg" alt="" class="pixel-char" width="32" height="43">
+            <h1 class="hero-name" data-i18n="hero_title">Fikret Kutluay</h1>
+            <div class="rule"></div>
+            <p class="hero-role" data-i18n="hero_subtitle">Game Developer</p>
+        </section>
+
+        <!-- Portfolio: category cards -> subpages -->
+        <section id="portfolio" class="section section-centred">
+            <div class="col">
+                <div class="page-head">
+                    <h2 class="page-title" data-i18n="portfolio_title">Portfolio</h2>
+                    <div class="rule"></div>
+                    <p class="page-sub" data-i18n="portfolio_sub"></p>
+
+                    <ul class="profile-links">
+                        <li><a href="https://github.com/fikretkutluay" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="https://fikretkutluay.itch.io" target="_blank" rel="noopener">itch.io</a></li>
+                        <li><a href="https://www.linkedin.com/in/fikret-kutluay-/" target="_blank"
+                                rel="noopener">LinkedIn</a></li>
+                        <li class="mail-item">
+                            <a href="mailto:kutluayfikret17@gmail.com" id="mail-link">kutluayfikret17@gmail.com</a>
+                            <button type="button" class="copy-btn" id="copy-mail" data-mail="kutluayfikret17@gmail.com"
+                                data-i18n="btn_copy">Copy</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="cat-cards" id="category-cards"></div>
+            </div>
+        </section>
+
+        <!-- About band: two columns of prose, centred container -->
+        <section id="about" class="section band section-centred">
+            <div class="col">
+                <div class="page-head">
+                    <h2 class="page-title" data-i18n="about_title">About</h2>
+                    <div class="rule"></div>
+                </div>
+                <div class="about-text">
+                    <p data-i18n="about_p1"></p>
+                    <p data-i18n="about_p2"></p>
+                    <p data-i18n="about_p3"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="col">
+            <p data-i18n="footer_text">© Fikret Kutluay</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 
