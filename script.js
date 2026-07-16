@@ -208,7 +208,7 @@ const translations = {
         game_ringbreaker_name: "Ring Breaker",
         game_ringbreaker_desc: "A fast-paced arcade-style mobile game built with Unity, with precision timing mechanics and progressive difficulty.",
         game_ringbreaker_roles: "Programmer",
-        game_ringbreaker_notes: "Object pooling for optimization, since a hyper-casual mobile game lives or dies on frame consistency rather than on peak performance.",
+        game_ringbreaker_notes: "Built on a scalable C# core framework with a custom Level Editor to speed up the content pipeline. Object pooling keeps it optimized, since a hyper-casual mobile game lives or dies on frame consistency rather than on peak performance.",
 
         game_vikingsurvivors_name: "Viking Survivors",
         game_vikingsurvivors_desc: "A high-performance top-down survivor roguelike in a Norse-inspired setting, built for the case where the screen fills with enemies and the frame rate still has to hold.",
@@ -327,7 +327,7 @@ const translations = {
         game_ringbreaker_name: "Ring Breaker",
         game_ringbreaker_desc: "Unity ile geliştirilmiş, hassas zamanlama mekaniklerine ve kademeli zorluk artışına sahip hızlı tempolu arcade tarzı bir mobil oyun.",
         game_ringbreaker_roles: "Programcı",
-        game_ringbreaker_notes: "Optimizasyon için object pooling; çünkü hyper-casual bir mobil oyun zirve performansla değil, frame tutarlılığıyla ayakta kalır.",
+        game_ringbreaker_notes: "İçerik üretimini hızlandırmak için özel bir Level Editor barındıran, ölçeklenebilir bir C# core framework üzerine kuruldu. Object pooling ile optimize; çünkü hyper-casual bir mobil oyun zirve performansla değil, frame tutarlılığıyla ayakta kalır.",
 
         game_vikingsurvivors_name: "Viking Survivors",
         game_vikingsurvivors_desc: "İskandinav esintili bir dünyada geçen, yüksek performanslı yukarıdan bakışlı survivor roguelike; ekran düşmanla dolduğunda bile frame rate'in ayakta kalması gereken senaryo için kuruldu.",
